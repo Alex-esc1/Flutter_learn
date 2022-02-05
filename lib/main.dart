@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      //Cupertino для разработки под ios
+  runApp(My());
+}
+
+class My extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.indigo,
         appBar: AppBar(
-          title: const Text("MyApp"),
+          title: const Text("My super app"),
           centerTitle: true,
         ),
-        body: const Center(
-            child: Text(
-          "My home page",
-          style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
-        )),
       ),
-    ),
-  );
+    );
+  }
 }
