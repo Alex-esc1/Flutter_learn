@@ -32,6 +32,10 @@ class My extends StatelessWidget {
                 ]),
           ),
         ),
+        floatingActionButton: const FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.cloud_download),
+        ),
       ),
     );
   }
