@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(My());
@@ -12,14 +14,24 @@ class My extends StatelessWidget {
           title: const Text("My super app"),
           centerTitle: true,
         ),
-        // ignore: prefer_const_literals_to_create_immutables
-        body: Column(children: <Widget>[
-          const LinearProgressIndicator(value: 23),
-          const Text(
-            '23 %',
-            style: TextStyle(color: Colors.white, fontSize: 20),
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: <Widget>[
+                  const LinearProgressIndicator(value: 23),
+                  const Text(
+                    '23 %',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  const Text(
+                    'Press button to download',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ]),
           ),
-        ]),
+        ),
       ),
     );
   }
