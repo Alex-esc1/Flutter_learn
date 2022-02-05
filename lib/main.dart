@@ -12,6 +12,14 @@ class My extends StatelessWidget {
           title: const Text("My super app"),
           centerTitle: true,
         ),
+        // ignore: prefer_const_literals_to_create_immutables
+        body: Column(children: <Widget>[
+          const LinearProgressIndicator(value: 23),
+          const Text(
+            '23 %',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        ]),
       ),
     );
   }
