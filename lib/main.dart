@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: Scaffold(),
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("MyApp"),
+          centerTitle: true,
+        ),
+      ),
     ),
   );
 }
