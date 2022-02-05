@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
+      //Cupertino для разработки под ios
       home: Scaffold(
         backgroundColor: Colors.indigo,
         appBar: AppBar(
