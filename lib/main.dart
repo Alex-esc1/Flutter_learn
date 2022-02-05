@@ -4,11 +4,11 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("MyApp"),
-          centerTitle: true,
-        ),
-      ),
+          appBar: AppBar(
+            title: const Text("MyApp"),
+            centerTitle: true,
+          ),
+          body: const Text("My home page")),
     ),
   );
 }
