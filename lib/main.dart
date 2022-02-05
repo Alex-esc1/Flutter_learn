@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, override_on_non_overriding_member
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(My());
@@ -13,12 +15,12 @@ class My extends StatefulWidget {
 
 class _MyApp extends State<My> {
   late bool _load;
-  late double _progress;
+  late double _progressV;
 
   @override
   void initState() {
     _load = false;
-    _progress = 0.0;
+    _progressV = 0.0;
     super.initState();
   }
 
@@ -41,7 +43,7 @@ class _MyApp extends State<My> {
                     children: <Widget>[
                       const LinearProgressIndicator(value: 23),
                       Text(
-                        '${(_progress * 100).round()}%',
+                        '${(_progressV * 100).round()}%',
                         style:
                             const TextStyle(color: Colors.white, fontSize: 20),
                       ),
@@ -57,11 +59,27 @@ class _MyApp extends State<My> {
           onPressed: () {
             setState(() {
               _load = !_load;
+              _update();
             });
           },
           child: const Icon(Icons.cloud_download),
         ),
       ),
     );
+  }
+
+  void _update() {
+    const sec = Duration(seconds: 1);
+    Timer.periodic(sec, (Timer t) {
+      setState(() {
+        _progressV += 0.2;
+        if (_progressV.toStringAsFixed(1) == '1.0') {
+          _load = false;
+          t.cancel();
+          _progressV = 0.0;
+          return;
+        }
+      });
+    });
   }
 }
