@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
               const Image(
                 image: AssetImage('assets/image/bg.jpg'),
               ),
+              Image.asset('assets/icons/icon.png')
             ],
           ),
         ),
