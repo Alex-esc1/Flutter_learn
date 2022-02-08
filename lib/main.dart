@@ -19,7 +19,18 @@ class MyApp extends StatelessWidget {
               const Image(
                 image: AssetImage('assets/image/bg.jpg'),
               ),
-              Image.asset('assets/icons/icon.png')
+              Image.asset('assets/icons/icon.png'),
+              // ignore: prefer_const_constructors
+              Positioned(
+                  top: 16,
+                  left: 50,
+                  child: const Text(
+                    'My Text for App',
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower'),
+                  ))
             ],
           ),
         ),
