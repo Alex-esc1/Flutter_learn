@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Stack(
+            fit: StackFit.expand,
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               const Image(
