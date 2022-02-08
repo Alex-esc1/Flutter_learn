@@ -11,7 +11,16 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Assets'),
         ),
-        body: null,
+        body: Center(
+          child: Stack(
+            // ignore: prefer_const_literals_to_create_immutables
+            children: <Widget>[
+              const Image(
+                image: AssetImage('assets/image/bg.jpg'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
