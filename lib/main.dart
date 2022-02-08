@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'IndieFlower'),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Assets'),
@@ -26,10 +27,7 @@ class MyApp extends StatelessWidget {
                   left: 50,
                   child: const Text(
                     'My Text for App',
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower'),
+                    style: TextStyle(fontSize: 30, color: Colors.white),
                   ))
             ],
           ),
